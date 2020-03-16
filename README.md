@@ -65,7 +65,7 @@ Join `id` room
 | userId | string |   yes    |   user id   |
 |  type  | "join" |   yes    |             |
 
-##### Join room
+##### Leave room
 
 |  key   |  type   | required | description |
 |:------:|:-------:|:--------:|:-----------:|
