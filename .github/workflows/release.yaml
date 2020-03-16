@@ -20,7 +20,7 @@ jobs:
         id: go
 
       - name: Install, Generate, Build
-        working-directory: ./backend
+        working-directory: ./
         run: |
           export PATH=$PATH:$(go env GOPATH)/bin
           make build
