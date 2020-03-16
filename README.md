@@ -7,15 +7,36 @@ You can Download this binary from [Release Tab](https://github.com/Mushus/websoc
 
 ## Usage
 
+### GET: `/playground`
+
+Show Playground Page
+
+#### Response Content-Type
+
+text/html
+
 ### GET: `/rooms`
 
 List all rooms.
+
+#### Response Content-Type
+
+application/json
+
+#### Response body
+
+|      key      |  type  | required | description |
+|:-------------:|:------:|:--------:|:-----------:|
+|    .rooms     | array  |   yes    | rooms data  |
+|  .rooms[].id  | string |   yes    |   room id   |
+| .rooms[].name | string |   yes    |  room name  |
+
 
 ### POST: `/rooms`
 
 Create a room
 
-#### Content-Type
+#### Request Content-Type
 
 application/json
 
@@ -25,7 +46,19 @@ application/json
 |:----:|:------:|:--------:|:-----------:|
 | name | string |   yes    |  room name  |
 
-### WS: `/room/{id}`
+#### Response Content-Type
+
+application/json
+
+#### Response body
+
+|    key     |  type  | required | description |
+|:----------:|:------:|:--------:|:-----------:|
+|   .room    | object |   yes    |  room data  |
+|  .room.id  | string |   yes    |   room id   |
+| .room.name | string |   yes    |  room name  |
+
+### WS: `/rooms/{id}`
 
 Join `id` room
 
